@@ -6,7 +6,8 @@ init:
     MYSQL_USER: perltest
     MYSQL_PASSWORD: testpass
     MYSQL_ROOT_PASSWORD: ''
-
+    ALL_TESTING: 1
+    
   services:
     mysql:
       db_name: $MYSQL_DATABASE
