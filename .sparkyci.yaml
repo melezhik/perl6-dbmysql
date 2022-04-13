@@ -18,6 +18,7 @@ init:
 
   script: |
     env | grep MYSQL
+    zef install --/test Test::When
     cp -v t/.my.cnf ~
 
 
