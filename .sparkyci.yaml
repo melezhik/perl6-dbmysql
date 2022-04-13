@@ -1,24 +1,18 @@
 init:
 
   variables:
-    MYSQL_DATABASE: perltest
-    MYSQL_HOST: localhost
-    MYSQL_USER: perltest
-    MYSQL_PASSWORD: testpass
-    MYSQL_ROOT_PASSWORD: ''
     ALL_TESTING: 1
     
   services:
     mysql:
-      db_name: $MYSQL_DATABASE
-      db_user: $MYSQL_USER
-      db_pass: $MYSQL_PASSWORD
+      db_name: perltest
+      db_user: perltest
+      db_pass: testpass
 
   packages:
     mysql: {}
 
   script: |
-    env | grep MYSQL
     zef install --/test Test::When
     cp -v t/.my.cnf ~
 
